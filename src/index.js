@@ -39,7 +39,8 @@ const myArr = [
   },
 ];
 
-const list = document.querySelector('.placeholder');
+const list = document.querySelector('div');
+list.classList.add('placeholder');
 const unList = document.createElement('div');
 unList.classList.add('container');
 list.appendChild(unList);
