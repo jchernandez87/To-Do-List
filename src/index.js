@@ -88,4 +88,4 @@ function display() {
   unList.appendChild(footer);
 }
 
-display();
+window.addEventListener('load', display);
