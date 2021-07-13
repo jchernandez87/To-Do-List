@@ -3,6 +3,8 @@
 // eslint-disable-next-line no-unused-vars
 import _ from 'lodash';
 import './style.css';
+import Icon from './assets/dots.svg';
+import Refresh from './assets/refresh.svg';
 
 const myArr = [
   {
@@ -44,6 +46,10 @@ list.appendChild(unList);
 const title = document.createElement('h1');
 title.textContent = "Today's To Do";
 title.classList.add('title');
+const refresh = document.createElement('img');
+refresh.classList.add('input-icon');
+refresh.src = Refresh;
+title.appendChild(refresh);
 unList.appendChild(title);
 const addList = document.createElement('input');
 addList.setAttribute('type', 'text');
@@ -65,8 +71,8 @@ function display() {
     text.textContent = myArr[i].description;
     text.classList.add('text');
     textContainer.appendChild(text);
-    const icon = document.createElement('i');
-    icon.textContent = '::';
+    const icon = document.createElement('img');
+    icon.src = Icon;
     icon.classList.add('row-icon');
     row.appendChild(icon);
     unList.appendChild(row);

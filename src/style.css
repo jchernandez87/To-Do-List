@@ -20,13 +20,25 @@
 }
 
 .title {
-  font-size: 20px;
-  padding: 10px;
+  font-family: monospace;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px 14px;
   border-bottom:1px solid lightgrey ;
 }
 
+.input-icon {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
 .add-list {
-  padding: 10px;
+  padding: 12px;
   width: 100%;
   border: none;
   border-bottom: 1px solid lightgrey;
@@ -38,7 +50,7 @@
 }
 
 .row {
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid lightgrey;
   width: 100%;
   display: flex;
@@ -55,7 +67,14 @@
 }
 
 .text {
-  margin-left: 5px;
+  font-family: cursive;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.row-icon {
+  height: 12px;
+  width: 12px;
 }
 
 .footer {
