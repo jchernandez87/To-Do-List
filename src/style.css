@@ -1,5 +1,7 @@
-body {
-  background-color: grey;
+.placeholder {
+  color: black;
+  border: 1px solid red;
+  background-color: white;
 }
 
 .hello {
