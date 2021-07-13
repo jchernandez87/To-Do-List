@@ -68,6 +68,7 @@ A to do list project with webpack and JavaScript
 
 ### Built With
 
+* [WEBPACK](https://webpack.js.org/)                              
 * [HTML](https://www.w3schools.com/html/)
 * [CSS](https://www.w3schools.com/css/)
 * [JS](https://www.javascript.com/)
@@ -161,6 +162,7 @@ Project Link: [https://github.com/jchernandez87/My-Portfolio](https://github.com
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
+* [WebPack](https://webpack.js.org/)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -175,4 +177,4 @@ Project Link: [https://github.com/jchernandez87/My-Portfolio](https://github.com
 [issues-url]: https://github.com/jchernandez87/To-Do-List/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/juan-carlos-hernandez-200a05175
-[product-screenshot]: https://user-images.githubusercontent.com/44485810/124983207-4a3a8080-dffd-11eb-9ae8-2ec6f79aab29.png
+[product-screenshot]: https://user-images.githubusercontent.com/44485810/125539205-dcae2e4e-abcc-4270-b101-f4b3908e8f88.png
