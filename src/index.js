@@ -40,8 +40,6 @@ const myArr = [
 ];
 
 const placeholder = document.querySelector('.placeholder');
-const reload = document.querySelector('.input-icon');
-reload.src = Refresh;
 
 function display() {
   for (let i = 0; i < myArr.length; i++) {
