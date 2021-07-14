@@ -39,26 +39,25 @@ const myArr = [
   },
 ];
 
-const list = document.querySelector('div');
-list.classList.add('placeholder');
-const unList = document.createElement('div');
-unList.classList.add('container');
-list.appendChild(unList);
-const title = document.createElement('h1');
-title.textContent = "Today's To Do";
-title.classList.add('title');
-const refresh = document.createElement('img');
-refresh.classList.add('input-icon');
-refresh.src = Refresh;
-title.appendChild(refresh);
-unList.appendChild(title);
-const addList = document.createElement('input');
-addList.setAttribute('type', 'text');
-addList.placeholder = 'Add to your list...';
-addList.classList.add('add-list');
-unList.appendChild(addList);
-
 function display() {
+  const list = document.querySelector('div');
+  list.classList.add('placeholder');
+  const unList = document.createElement('div');
+  unList.classList.add('container');
+  list.appendChild(unList);
+  const title = document.createElement('h1');
+  title.textContent = "Today's To Do";
+  title.classList.add('title');
+  const refresh = document.createElement('img');
+  refresh.classList.add('input-icon');
+  refresh.src = Refresh;
+  title.appendChild(refresh);
+  unList.appendChild(title);
+  const addList = document.createElement('input');
+  addList.setAttribute('type', 'text');
+  addList.placeholder = 'Add to your list...';
+  addList.classList.add('add-list');
+  unList.appendChild(addList);
   for (let i = 0; i < myArr.length; i++) {
     const row = document.createElement('div');
     row.classList.add('row');

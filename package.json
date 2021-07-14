@@ -1,5 +1,5 @@
 {
-  "name": "To-Do-List",
+  "name": "to-do-list",
   "version": "1.0.0",
   "description": "To Do list exercise using webpack",
   "private": true,
