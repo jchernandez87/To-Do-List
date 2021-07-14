@@ -5,8 +5,6 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/jchernandez87/To-Do-List">
@@ -30,8 +28,6 @@
 </p>
 
 
-
-<!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -58,8 +54,6 @@
 </details>
 
 
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
 
 [![Capstone][product-screenshot]](https://jchernandez87.github.io/To-Do-List)
@@ -82,7 +76,7 @@ A to do list project with webpack and JavaScript
 - Twitter: [Twitter](https://twitter.com/Juancar70771241)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/juan-carlos-hernandez-200a05175)
 
-<!-- GETTING STARTED -->
+                                   
 ## Getting Started
 
 * You will not need additional instructions on installing Prerequisites.
@@ -91,16 +85,8 @@ A to do list project with webpack and JavaScript
 ### Prerequisites
 
 * No prerequisites needed for this project.
- <!--
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
--->
 
 ### Installation
-<!-- 1. Get a free API Key at [https://example.com](https://example.com) -->
 1. Clone the repo
    ```sh
    git clone git@github.com:jchernandez87/To-Do-List.git
@@ -109,28 +95,21 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
-<!-- 4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
+3. Run server
+   ```sh
+   npm start
    ```
--->
-
-<!-- USAGE EXAMPLES -->
+                                   
 ## Usage
 
 * Practice to setup a webpack project and to make a to do list with UI functionality.
 
-<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
-
-<!-- ROADMAP -->
 ## Roadmap
 
 See the [open issues](https://github.com/jchernandez87/To-Do-List/issues) for a list of proposed features (and known issues).
 
 
-
-<!-- CONTRIBUTING -->
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -142,22 +121,15 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-<!-- LICENSE -->
-## License
-
 License Free.
-<!-- Distributed under the MIT License. See `LICENSE` for more information. -->
 
-<!-- CONTACT 
 ## Contact
 
 Juan Carlos - [@FindMeOnTwitter](https://twitter.com/Juancar70771241) - jchernandez827@gmail.com
 
 Project Link: [https://github.com/jchernandez87/My-Portfolio](https://github.com/jchernandez87/To-Do-List)
 
--->
 
-<!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Img Shields](https://shields.io)
@@ -165,8 +137,6 @@ Project Link: [https://github.com/jchernandez87/My-Portfolio](https://github.com
 * [WebPack](https://webpack.js.org/)
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/jchernandez87/To-Do-List?style=for-the-badge
 [contributors-url]: https://github.com/jchernandez87/To-Do-List/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/jchernandez87/To-Do-List?style=for-the-badge
