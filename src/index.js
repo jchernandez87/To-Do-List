@@ -78,15 +78,14 @@ function display() {
     row.appendChild(icon);
     unList.appendChild(row);
   }
+  const footer = document.createElement('div');
+  footer.classList.add('footer');
+  const footerBtn = document.createElement('button');
+  footerBtn.setAttribute('type', 'button');
+  footerBtn.classList.add('footer-btn');
+  footerBtn.textContent = 'Clear All Completed';
+  footer.appendChild(footerBtn);
+  unList.appendChild(footer);
 }
-
-const footer = document.createElement('div');
-footer.classList.add('footer');
-const footerBtn = document.createElement('button');
-footerBtn.setAttribute('type', 'button');
-footerBtn.classList.add('footer-btn');
-footerBtn.textContent = 'Clear All Completed';
-footer.appendChild(footerBtn);
-unList.appendChild(footer);
 
 window.addEventListener('load', display);
