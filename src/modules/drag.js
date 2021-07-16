@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
 /* eslint-disable import/prefer-default-export */
-import { updateData } from './localStorage.js';
+import { updateData, updateArr } from './localStorage.js';
 import { checkClick } from './tasks.js';
 
 let srcElement = null;
@@ -33,15 +33,15 @@ const drag = (item) => {
   });
 
   item.addEventListener('drop', (e) => {
-    e.preventDefault();
     e.stopPropagation();
     if (srcElement !== item) {
       srcElement.innerHTML = item.innerHTML;
       item.innerHTML = e.dataTransfer.getData('text/html');
     }
     item.classList.remove('over');
-    checkClick();
+    updateArr();
     updateData();
+    checkClick();
     return false;
   });
 };

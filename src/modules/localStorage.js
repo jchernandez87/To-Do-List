@@ -37,28 +37,19 @@ const myArr = [
 ];
 
 const list = document.getElementsByClassName('row');
-
-const testArr = [];
-
-const test = () => {
-  for (let i = 0; i < list.length; i++) {
-    checkInput[i].addEventListener('click', () => {
-      if (checkInput[i].nextElementSibling.classList.contains('completed')) {
-        testArr[i].completed = true;
-      } else {
-        testArr[i].completed = false;
-      }
-      updateData();
-    });
-  }
-};
-
-window.addEventListener('load', test);
+const placeHolder = document.querySelector('.placeholder');
 
 const updateArr = () => {
+  const dataArr = [];
   for (let i = 0; i < list.length; i++) {
-    testArr.push({ description: list[i].textContent, completed: false, index: list[i].getAttribute('data-id') });
+    dataArr.push({ description: list[i].textContent, completed: false, index: list[i].getAttribute('data-id') });
+    if (checkInput[i].nextElementSibling.classList.contains('completed')) {
+      dataArr[i].completed = true;
+    } else {
+      dataArr[i].completed = false;
+    }
   }
+  return dataArr;
 };
 
 const saveData = () => {
@@ -83,13 +74,14 @@ const getData = () => {
 };
 
 const updateData = () => {
-  const data = JSON.stringify(testArr);
+  const data = JSON.stringify(updateArr());
   localStorage.setItem('tasks', data);
 };
 
-window.addEventListener('load', updateArr);
+placeHolder.addEventListener('click', updateData);
+
 window.addEventListener('load', saveData);
 
 export {
-  saveData, updateData, getData,
+  updateArr, saveData, updateData, getData,
 };
