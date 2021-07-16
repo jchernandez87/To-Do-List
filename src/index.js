@@ -4,19 +4,20 @@
 /* eslint-disable no-plusplus */
 import _ from 'lodash';
 import {
-  drag, log, myArr, getData,
+  drag, log,
 } from './modules/drag.js';
+import {
+  getData, saveData,
+} from './modules/localStorage.js';
 import './style.css';
 import Icon from './assets/dots.svg';
-
-log();
 
 const newArr = getData();
 
 const placeholder = document.querySelector('.placeholder');
 
 function display() {
-  for (let i = 0; i < myArr.length; i++) {
+  for (let i = 0; i < newArr.length; i++) {
     const row = document.createElement('div');
     row.setAttribute('data-id', i);
     row.classList.add('row');
@@ -31,7 +32,7 @@ function display() {
     textContainer.appendChild(checkBox);
 
     const text = document.createElement('span');
-    text.textContent = myArr[i].description;
+    text.textContent = newArr[i].description;
     text.classList.add('text');
     textContainer.appendChild(text);
 
@@ -45,6 +46,4 @@ function display() {
   }
 }
 
-console.log(newArr);
-
-window.addEventListener('load', display);
+document.addEventListener('DOMContentLoaded', display);
