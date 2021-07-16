@@ -3,12 +3,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-plusplus */
 import _ from 'lodash';
+import { drag } from './modules/drag.js';
 import {
-  drag, log,
-} from './modules/drag.js';
-import {
-  getData, saveData,
+  getData, updateArr,
 } from './modules/localStorage.js';
+// import { taskLog } from './modules/tasks';
 import './style.css';
 import Icon from './assets/dots.svg';
 
@@ -28,7 +27,9 @@ function display() {
     row.appendChild(textContainer);
 
     const checkBox = document.createElement('input');
+    checkBox.classList.add('checkBox');
     checkBox.setAttribute('type', 'checkbox');
+    checkBox.setAttribute('data-task', i);
     textContainer.appendChild(checkBox);
 
     const text = document.createElement('span');

@@ -1,5 +1,8 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
+import { checkInput } from './tasks.js';
+
 const myArr = [
   {
     description: 'Walk the dog 1',
@@ -35,18 +38,33 @@ const myArr = [
 
 const list = document.getElementsByClassName('row');
 
-const updateArr = () => {
-  const dataArr = [];
+const testArr = [];
+
+const test = () => {
   for (let i = 0; i < list.length; i++) {
-    dataArr.push({ description: list[i].textContent, index: list[i].getAttribute('data-id') });
+    checkInput[i].addEventListener('click', () => {
+      if (checkInput[i].nextElementSibling.classList.contains('completed')) {
+        testArr[i].completed = true;
+      } else {
+        testArr[i].completed = false;
+      }
+      updateData();
+    });
   }
-  return dataArr;
+};
+
+window.addEventListener('load', test);
+
+const updateArr = () => {
+  for (let i = 0; i < list.length; i++) {
+    testArr.push({ description: list[i].textContent, completed: false, index: list[i].getAttribute('data-id') });
+  }
 };
 
 const saveData = () => {
   let dataArr;
   if (localStorage.getItem('tasks') === null) {
-    dataArr = [...myArr];
+    dataArr = myArr;
   } else {
     dataArr = JSON.parse(localStorage.getItem('tasks'));
   }
@@ -65,12 +83,13 @@ const getData = () => {
 };
 
 const updateData = () => {
-  const data = JSON.stringify(updateArr());
+  const data = JSON.stringify(testArr);
   localStorage.setItem('tasks', data);
 };
 
-document.addEventListener('DOMContentLoaded', saveData);
+window.addEventListener('load', updateArr);
+window.addEventListener('load', saveData);
 
 export {
-  updateArr, saveData, updateData, getData,
+  saveData, updateData, getData,
 };

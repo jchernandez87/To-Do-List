@@ -2,7 +2,8 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
 /* eslint-disable import/prefer-default-export */
-import { updateData, updateArr } from './localStorage.js';
+import { updateData } from './localStorage.js';
+import { checkClick } from './tasks.js';
 
 let srcElement = null;
 
@@ -14,7 +15,8 @@ const drag = (item) => {
     item.classList.add('dragging');
   });
 
-  item.addEventListener('dragend', () => {
+  item.addEventListener('dragend', (e) => {
+    e.preventDefault();
     item.classList.remove('dragging');
   });
 
@@ -38,15 +40,10 @@ const drag = (item) => {
       item.innerHTML = e.dataTransfer.getData('text/html');
     }
     item.classList.remove('over');
+    checkClick();
     updateData();
     return false;
   });
 };
 
-function log() {
-  console.log(updateArr());
-}
-
-export {
-  drag, log,
-};
+export { drag };

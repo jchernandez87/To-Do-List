@@ -74,6 +74,11 @@
   align-items: center;
 }
 
+.completed {
+  color: red;
+  text-decoration-line: line-through;
+}
+
 .text {
   font-family: cursive;
   font-size: 14px;
