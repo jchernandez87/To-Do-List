@@ -5,7 +5,7 @@
 }
 
 .container {
-  width: 400px;
+  width: 600px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -59,11 +59,24 @@
   align-items: center;
 }
 
+.dragging {
+  background-color: lightgrey;
+}
+
+.over {
+  border: 1px solid red;
+}
+
 .text-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+.completed {
+  color: red;
+  text-decoration-line: line-through;
 }
 
 .text {
@@ -75,6 +88,7 @@
 .row-icon {
   height: 12px;
   width: 12px;
+  cursor: move;
 }
 
 .footer {
