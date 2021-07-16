@@ -4,10 +4,7 @@
 /* eslint-disable no-plusplus */
 import _ from 'lodash';
 import { drag } from './modules/drag.js';
-import {
-  getData, updateArr,
-} from './modules/localStorage.js';
-// import { taskLog } from './modules/tasks';
+import { getData } from './modules/localStorage.js';
 import './style.css';
 import Icon from './assets/dots.svg';
 
