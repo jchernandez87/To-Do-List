@@ -6,12 +6,11 @@ const checkInput = document.getElementsByClassName('checkBox');
 const checkClick = () => {
   for (let i = 0; i < checkInput.length; i++) {
     checkInput[i].addEventListener('click', () => {
-      checkInput[i].nextElementSibling.classList.toggle('completed');
+      checkInput[i].parentElement.classList.toggle('completed');
+      checkInput[i].parentElement.parentElement.classList.toggle('completed');
       checkInput[i].toggleAttribute('checked');
     });
   }
 };
-
-window.addEventListener('load', checkClick);
 
 export { checkClick, checkInput };

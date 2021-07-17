@@ -31,6 +31,12 @@
   border-bottom: 1px solid lightgrey;
 }
 
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .input-icon {
   position: relative;
   height: 15px;
@@ -47,6 +53,16 @@
 .add-list::placeholder {
   font-style: italic;
   font-size: 14px;
+}
+
+.add-btn {
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 8px 20px;
+  background-color: orange;
+  color: white;
+  font-weight: 800;
+  border: none;
 }
 
 .row {
@@ -85,6 +101,24 @@
   margin-left: 10px;
 }
 
+.icon-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 40px;
+}
+
+.del-btn {
+  align-self: flex-end;
+  color: black;
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+  cursor: pointer;
+}
+
 .row-icon {
   height: 12px;
   width: 12px;
@@ -104,4 +138,5 @@
   color: #a7a7a7;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
