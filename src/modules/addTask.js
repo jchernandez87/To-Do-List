@@ -5,9 +5,9 @@ import { drag } from './drag.js';
 import Trash from '../assets/trash.svg';
 import Icon from '../assets/dots.svg';
 import {
-  updateArr, updateData, getData,
+  updateData, getData, list,
 } from './localStorage.js';
-import { checkClick, checkInput } from './tasks.js';
+import { checkClick } from './tasks.js';
 
 const placeholder = document.querySelector('.placeholder');
 const input = document.querySelector('.add-list');
@@ -55,10 +55,10 @@ function addTask(e) {
   icon.classList.add('row-icon');
   iconCont.appendChild(icon);
   placeholder.appendChild(row);
-  input.value = '';
-  count++;
   updateData();
   drag(row);
+  input.value = '';
+  count++;
   window.location.reload();
 }
 
@@ -112,21 +112,15 @@ const removeTask = (e) => {
 };
 
 const clearAll = () => {
-  const arr = getData();
-  for (let i = 1; i < arr.length; i++) {
-    if (checkInput[i].nextElementSibling.classList.contains('completed')) {
-      checkInput[i].parentElement.parentElement.remove();
-    }
-  }
+  const testArr = Array.from(list);
+  const filterArr = testArr.filter((item) => item.classList.contains('completed'));
+  filterArr.forEach((item) => item.remove());
   updateData();
 };
 
 clearBtn.addEventListener('click', clearAll);
 placeholder.addEventListener('click', removeTask);
-
 window.addEventListener('DOMContentLoaded', display);
-window.addEventListener('DOMContentLoaded', updateArr);
-window.addEventListener('DOMContentLoaded', updateData);
 window.addEventListener('load', checkClick);
 
 export { addTask, addBtn, display };
