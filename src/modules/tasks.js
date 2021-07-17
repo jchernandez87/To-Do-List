@@ -12,6 +12,4 @@ const checkClick = () => {
   }
 };
 
-window.addEventListener('load', checkClick);
-
 export { checkClick, checkInput };
