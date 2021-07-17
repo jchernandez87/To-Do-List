@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-plusplus */
-import { checkInput } from './tasks.js';
+import { checkClick, checkInput } from './tasks.js';
 
 const list = document.getElementsByClassName('row');
 
@@ -13,12 +13,6 @@ const getData = () => {
     dataArr = JSON.parse(localStorage.getItem('tasks'));
   }
   return dataArr;
-};
-
-const saveData = (data) => {
-  const dataArr = getData();
-  dataArr.push(data);
-  localStorage.setItem('data', JSON.stringify(dataArr));
 };
 
 const updateArr = () => {
@@ -39,6 +33,8 @@ const updateData = () => {
   localStorage.setItem('tasks', data);
 };
 
+window.addEventListener('load', checkClick);
+
 export {
-  updateArr, saveData, updateData, getData,
+  updateArr, updateData, getData,
 };

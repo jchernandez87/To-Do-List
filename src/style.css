@@ -31,7 +31,7 @@
   border-bottom: 1px solid lightgrey;
 }
 
-.form { 
+.form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -138,4 +138,5 @@
   color: #a7a7a7;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }

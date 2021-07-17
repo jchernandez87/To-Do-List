@@ -1,18 +1,18 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-plusplus */
 /* eslint-disable import/prefer-default-export */
-// const form = document.querySelector('.form');
 import { drag } from './drag.js';
 import Trash from '../assets/trash.svg';
 import Icon from '../assets/dots.svg';
 import {
   updateArr, updateData, getData,
 } from './localStorage.js';
-import { checkClick } from './tasks.js';
+import { checkClick, checkInput } from './tasks.js';
 
 const placeholder = document.querySelector('.placeholder');
 const input = document.querySelector('.add-list');
 const addBtn = document.querySelector('.add-btn');
+const clearBtn = document.querySelector('.footer-btn');
 
 const newArr = getData();
 
@@ -111,6 +111,17 @@ const removeTask = (e) => {
   updateData();
 };
 
+const clearAll = () => {
+  const arr = getData();
+  for (let i = 1; i < arr.length; i++) {
+    if (checkInput[i].nextElementSibling.classList.contains('completed')) {
+      checkInput[i].parentElement.parentElement.remove();
+    }
+  }
+  updateData();
+};
+
+clearBtn.addEventListener('click', clearAll);
 placeholder.addEventListener('click', removeTask);
 
 window.addEventListener('DOMContentLoaded', display);
