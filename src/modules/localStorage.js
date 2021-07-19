@@ -14,7 +14,6 @@ const updateArr = () => {
     } else {
       dataArr[i].completed = false;
     }
-    console.log(checkInput[i].parentNode);
   }
   return dataArr;
 };
