@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/jchernandez87/To-Do-List/issues"
   },
-  "homepage": "https://github.com/jchernandez87/To-Do-List#readme",
+  "homepage": "https://github.com/jchernandez87/To-Do-List",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^5.2.7",
